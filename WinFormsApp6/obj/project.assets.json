@@ -85,12 +85,12 @@
         },
         "compile": {
           "ref/net6.0/Microsoft.Data.SqlClient.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/net6.0/Microsoft.Data.SqlClient.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtimeTargets": {
@@ -559,12 +559,12 @@
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
-            "related": ".xml;.pdb"
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -3169,23 +3169,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Muhammad\\.nuget\\packages\\": {},
+    "C:\\Users\\fetul_jv25\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Muhammad\\source\\repos\\WinFormsApp6\\WinFormsApp6\\WinFormsApp6.csproj",
+      "projectUniqueName": "C:\\Users\\fetul_jv25\\Source\\Repos\\ADO-.NET-Task-4\\WinFormsApp6\\WinFormsApp6.csproj",
       "projectName": "WinFormsApp6",
-      "projectPath": "C:\\Users\\Muhammad\\source\\repos\\WinFormsApp6\\WinFormsApp6\\WinFormsApp6.csproj",
-      "packagesPath": "C:\\Users\\Muhammad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Muhammad\\source\\repos\\WinFormsApp6\\WinFormsApp6\\obj\\",
+      "projectPath": "C:\\Users\\fetul_jv25\\Source\\Repos\\ADO-.NET-Task-4\\WinFormsApp6\\WinFormsApp6.csproj",
+      "packagesPath": "C:\\Users\\fetul_jv25\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fetul_jv25\\Source\\Repos\\ADO-.NET-Task-4\\WinFormsApp6\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Muhammad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fetul_jv25\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3207,6 +3207,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3245,7 +3250,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

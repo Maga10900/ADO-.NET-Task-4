@@ -10,6 +10,6 @@ public class Car
 
     public override string ToString()
     {
-        return $"{Id}:\t{Marka}--{Model}--{Year}--{stNum}";
+        return $"{Marka}--{Model}--{Year}--{stNum}";
     }
 }

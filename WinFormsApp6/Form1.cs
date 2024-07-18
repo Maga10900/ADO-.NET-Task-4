@@ -1,8 +1,12 @@
+using System;
+
 namespace WinFormsApp6
 {
     public partial class Form1 : Form
     {
-        public int num = 0;
+
+
+        public int s { get; set; } = -1;
         public Form1()
         {
             InitializeComponent();
@@ -14,7 +18,6 @@ namespace WinFormsApp6
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,36 +63,27 @@ namespace WinFormsApp6
         {
             using (CarContex db = new())
             {
-                button1.Enabled = false;
-                button3.Enabled = false;
-
-
                 Car uCar = listBox1.SelectedItem as Car;
-                MakeTxtBox.Text = uCar.Marka;
-                ModelTxtBox.Text = uCar.Model;
-                YearTxtBox.Text = uCar.Year.ToString();
-                SNumberTxtBox.Text = uCar.stNum;
 
-
-                if (MakeTxtBox.Text == uCar.Marka && ModelTxtBox.Text == uCar.Model && YearTxtBox.Text == uCar.Year.ToString() && SNumberTxtBox.Text == uCar.stNum && num++ > 0)
-                {
-                    MessageBox.Show("Update Elemek ucun Her hansisa bir Datani deyisin!");
-                }
-                else
-                {
-                    if (num > 1)
-                    {
-                        uCar.Marka = MakeTxtBox.Text;
-                        uCar.Model = ModelTxtBox.Text;
-                        uCar.Year = int.Parse(YearTxtBox.Text);
-                        uCar.stNum = SNumberTxtBox.Text;
-                        db.Cars.Update(uCar);
-                        listBox1.DataContext = null;
-                        listBox1.DataContext = db.Cars;
-                        db.SaveChanges();
-                    }
-                }
+                uCar.Marka = MakeTxtBox.Text;
+                uCar.Model = ModelTxtBox.Text;
+                uCar.Year = int.Parse(YearTxtBox.Text);
+                uCar.stNum = SNumberTxtBox.Text;
+                db.Cars.Update(uCar);
+                db.SaveChanges();
+                listBox1.DataSource = db.Cars.ToList();
+                listBox1.Refresh();
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Car uCar = listBox1.SelectedItem as Car;
+            MakeTxtBox.Text = uCar.Marka;
+            ModelTxtBox.Text = uCar.Model;
+            YearTxtBox.Text = uCar.Year.ToString();
+            SNumberTxtBox.Text = uCar.stNum;
+
         }
     }
 }
